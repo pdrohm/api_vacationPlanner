@@ -24,3 +24,15 @@ Yarn
 ###Usage
 
 - yarn start
+
+### Videos and links
+
+##### Short video
+
+Short video only showing the function of the UI.
+https://youtu.be/ReslsjCOclY
+
+##### Full explanation video
+
+Video showing and narrating the UI, the coding and architeture.
+https://www.youtube.com/watch?v=VoBqw6uoi5k

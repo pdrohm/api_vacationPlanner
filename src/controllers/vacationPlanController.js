@@ -113,6 +113,26 @@ const vacationPlanController = {
       res.status(500).json({ error: "Failed to update vacation plan cover" });
     }
   },
+  getPlanById(req, res) {
+    try {
+      const planId = req.params.id;
+      const rawData = fs.readFileSync(dataFilePath);
+      const data = JSON.parse(rawData);
+
+      const plan = data.vacationPlans.find(
+        (plan) => plan.id === parseInt(planId)
+      );
+
+      if (plan) {
+        res.json(plan);
+      } else {
+        res.status(404).json({ error: "Vacation plan not found" });
+      }
+    } catch (error) {
+      console.error("Error reading data file:", error);
+      res.status(500).json({ error: "Failed to retrieve vacation plan" });
+    }
+  },
 };
 
 module.exports = vacationPlanController;

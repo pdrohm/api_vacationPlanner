@@ -18,6 +18,7 @@ router.get("/", vacationPlanController.getAllVacationPlans);
 router.post("/", vacationPlanController.createVacationPlan);
 router.put("/:id", vacationPlanController.editVacationPlan);
 router.delete("/:id", vacationPlanController.deleteVacationPlan);
+router.get("/:id", vacationPlanController.getPlanById);
 
 router.put(
   "/:id/upload-cover",
